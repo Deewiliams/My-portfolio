@@ -1,5 +1,4 @@
 import { Container, Grid, Image, Text } from "@mantine/core";
-import SelectorTab from "../../component/Tab";
 import { TitleHead } from "../../component/Title";
 import image from "../../assets/desire.jpg";
 import classes from "./AboutUs.module.css"

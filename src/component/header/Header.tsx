@@ -26,7 +26,6 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-//   import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from "./Header.module.css";
 
 const mockdata = [

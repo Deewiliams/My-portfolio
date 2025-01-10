@@ -1,16 +1,11 @@
-// import { IconCheck } from '@tabler/icons-react';
 import {
   Button,
   Container,
   Grid,
   Group,
   Image,
-  List,
-  Text,
-  ThemeIcon,
   Title,
 } from "@mantine/core";
-// import image from './image.svg';
 import classes from "./LandingPage.module.css";
 import coder from "../../assets/coder.svg";
 
