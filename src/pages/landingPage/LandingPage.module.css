@@ -3,6 +3,8 @@
   justify-content: space-between;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  margin-top: -30%;
+  
 }
 
 .content {
@@ -39,6 +41,7 @@
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: 28px;
+    
   }
 }
 
@@ -54,9 +57,9 @@
   display: flex;
 
   justify-content: end;
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
+  /* @media (max-width: $mantine-breakpoint-md) {
+    margin-top: -50%;
+  } */
 }
 
 .highlight {
