@@ -1,9 +1,12 @@
 import "./App.css";
 import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
+import { LandingPage } from "./pages/landingPage/LandingPage";
 
 function App() {
-  return <MantineProvider>hello there</MantineProvider>;
+  return <MantineProvider defaultColorScheme="dark">
+    <LandingPage />
+  </MantineProvider>;
 }
 
 export default App;
