@@ -1,0 +1,10 @@
+.wrapper {
+  padding-top: calc(var(--mantine-spacing-xl) * 2);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  min-height: 650px;
+}
+
+.title {
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+  font-size: 3.5rem;
+}
