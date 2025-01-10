@@ -5,7 +5,7 @@ export const TitleHead = () => {
   return (
     <Container size="sm" className={classes.wrapper}>
       <Title ta="center" className={classes.title}>
-        About Us
+        About Me
       </Title>
     </Container>
   );
