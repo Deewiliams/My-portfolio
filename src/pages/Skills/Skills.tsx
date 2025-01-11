@@ -1,15 +1,4 @@
-import { IconCookie, IconGauge, IconUser } from "@tabler/icons-react";
-import {
-  Badge,
-  Card,
-  Container,
-  Group,
-  Image,
-  SimpleGrid,
-  Text,
-  Title,
-  useMantineTheme,
-} from "@mantine/core";
+import { Card, Container, Image, SimpleGrid } from "@mantine/core";
 import classes from "./Skills.module.css";
 import js from "../../assets/js.png";
 import css from "../../assets/css.png";
@@ -18,14 +7,26 @@ import react from "../../assets/react.png";
 import typescript from "../../assets/typescript.png";
 import git from "../../assets/git.png";
 import github from "../../assets/github.png";
-// import reactjs from "../../assets/react.png";
 import node from "../../assets/nodejs.png";
 import mongodb from "../../assets/mongodb.svg";
-import reactNavtive from "../../assets/reactNative.png"
+import reactNavtive from "../../assets/reactNative.png";
 import aws from "../../assets/aws.png";
-import bootstap from "../../assets/bootstrap.png"
+import bootstap from "../../assets/bootstrap.png";
 
-const mockdata = [ html,css,js,react,typescript,github, node, mongodb, reactNavtive, aws, git, bootstap];
+const mockdata = [
+  html,
+  css,
+  js,
+  react,
+  typescript,
+  github,
+  node,
+  mongodb,
+  reactNavtive,
+  aws,
+  git,
+  bootstap,
+];
 
 export function Skills() {
   return (
