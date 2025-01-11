@@ -49,7 +49,7 @@ export const AboutUs = () => {
 
   return (
     <div>
-      <TitleHead />
+      <TitleHead title="About Us" />
       <div
         style={{
           display: "flex",

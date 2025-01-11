@@ -1,11 +1,13 @@
 import { Container, Title } from "@mantine/core";
 import classes from "./Title.module.css";
-
-export const TitleHead = () => {
+ interface TitleProps {
+  title: string;
+}
+export const TitleHead = (props: TitleProps) => {
   return (
     <Container size="sm" className={classes.wrapper}>
       <Title ta="center" className={classes.title}>
-        About Me
+       {props.title}
       </Title>
     </Container>
   );
