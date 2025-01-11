@@ -1,10 +1,20 @@
-import { Button, Container, Grid, Group, Image, Text } from "@mantine/core";
+import {
+  Button,
+  Container,
+  Grid,
+  Group,
+  Image,
+  List,
+  Text,
+  ThemeIcon,
+} from "@mantine/core";
 import { TitleHead } from "../../component/Title";
 import image from "../../assets/desire.jpg";
 import classes from "./AboutUs.module.css";
 import { useState } from "react";
+import { IconCheck } from "@tabler/icons-react";
 
-interface Details {
+interface DetailsProps {
   id: number;
   name: string;
   about_me: string;
@@ -30,15 +40,13 @@ const details = [
   },
 ];
 
-
-
 export const AboutUs = () => {
-  const [selectedItem, setSelectedItem] = useState<Details>();
+  const [selectedItem, setSelectedItem] = useState<DetailsProps>();
 
-  const handleSelectedAboutMe = (item: Details) => {
-    setSelectedItem(item)
+  const handleSelectedAboutMe = (item: DetailsProps) => {
+    setSelectedItem(item);
+  };
 
-  }
   return (
     <div>
       <TitleHead />
@@ -85,7 +93,80 @@ export const AboutUs = () => {
           </Grid.Col>
           <Grid.Col span={{ base: 12, xs: 8 }}>
             <Text>
-              {selectedItem?.about_me}
+              {selectedItem?.name === "Boi" ? (
+                <p>hello there</p>
+              ) : selectedItem?.name === "Education" ? (
+                <List
+                  mt={30}
+                  spacing="sm"
+                  size="sm"
+                  icon={
+                    <ThemeIcon size={20} radius="xl">
+                      <IconCheck size={12} stroke={1.5} />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>
+                    <b>TypeScript based</b> – build type safe applications, all
+                    components and hooks export types
+                  </List.Item>
+                  <List.Item>
+                    <b>Free and open source</b> – all packages have MIT license,
+                    you can use Mantine in any project
+                  </List.Item>
+                  <List.Item>
+                    <b>No annoying focus ring</b> – focus ring will appear only
+                    when user navigates with keyboard
+                  </List.Item>
+                </List>
+              ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
+                <List
+                mt={30}
+                spacing="sm"
+                size="sm"
+                icon={
+                  <ThemeIcon size={20} radius="xl">
+                    <IconCheck size={12} stroke={1.5} />
+                  </ThemeIcon>
+                }
+              >
+                <List.Item>
+                  hello
+                </List.Item>
+                <List.Item>
+                  <b>Free and open source</b> – all packages have MIT license,
+                  you can use Mantine in any project
+                </List.Item>
+                <List.Item>
+                  <b>No annoying focus ring</b> – focus ring will appear only
+                  when user navigates with keyboard
+                </List.Item>
+              </List>
+              ) : null}
+
+              {/* <List
+                    mt={30}
+                    spacing="sm"
+                    size="sm"
+                    icon={
+                      <ThemeIcon size={20} radius="xl">
+                        <IconCheck size={12} stroke={1.5} />
+                      </ThemeIcon>
+                    }
+                  >
+                    <List.Item>
+                      <b>TypeScript based</b> – build type safe applications,
+                      all components and hooks export types
+                    </List.Item>
+                    <List.Item>
+                      <b>Free and open source</b> – all packages have MIT
+                      license, you can use Mantine in any project
+                    </List.Item>
+                    <List.Item>
+                      <b>No annoying focus ring</b> – focus ring will appear
+                      only when user navigates with keyboard
+                    </List.Item>
+                  </List> */}
             </Text>
           </Grid.Col>
         </Grid>
