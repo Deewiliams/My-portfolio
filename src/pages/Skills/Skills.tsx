@@ -4,74 +4,46 @@ import {
   Card,
   Container,
   Group,
+  Image,
   SimpleGrid,
   Text,
   Title,
   useMantineTheme,
 } from "@mantine/core";
 import classes from "./Skills.module.css";
+import js from "../../assets/js.png";
+import css from "../../assets/css.png";
+import html from "../../assets/html.png";
+import react from "../../assets/react.png";
+import typescript from "../../assets/typescript.png";
+import git from "../../assets/git.png";
+import github from "../../assets/github.png";
+// import reactjs from "../../assets/react.png";
+import node from "../../assets/nodejs.png";
+import mongodb from "../../assets/mongodb.svg";
+import reactNavtive from "../../assets/reactNative.png"
+import aws from "../../assets/aws.png";
+import bootstap from "../../assets/bootstrap.png"
 
-const mockdata = [
-  {
-    title: "Extreme performance",
-    description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
-    icon: IconGauge,
-  },
-  {
-    title: "Privacy focused",
-    description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
-    icon: IconUser,
-  },
-  {
-    title: "No third parties",
-    description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
-    icon: IconCookie,
-  },
-];
+const mockdata = [ html,css,js,react,typescript,github, node, mongodb, reactNavtive, aws, git, bootstap];
 
 export function Skills() {
-  const theme = useMantineTheme();
-  const features = mockdata.map((feature) => (
-    <Card
-      key={feature.title}
-      shadow="md"
-      radius="md"
-      className={classes.card}
-      padding="xl"
-    >
-      <feature.icon size={50} stroke={2} color={theme.colors.blue[6]} />
-      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
-        {feature.title}
-      </Text>
-      <Text fz="sm" c="dimmed" mt="sm">
-        {feature.description}
-      </Text>
-    </Card>
-  ));
-
   return (
     <Container size="lg" py="xl">
-      <Group justify="center">
-        <Badge variant="filled" size="lg">
-          Best company ever
-        </Badge>
-      </Group>
-
-      <Title order={2} className={classes.title} ta="center" mt="sm">
-        Integrate effortlessly with any technology stack
-      </Title>
-
-      <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Every once in a while, you’ll see a Golbat that’s missing some fangs.
-        This happens when hunger drives it to try biting a Steel-type Pokémon.
-      </Text>
-
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
-        {features}
+      <SimpleGrid cols={{ base: 1, md: 4 }} spacing="xl" mt={50}>
+        {mockdata.map((feature) => (
+          <Card
+            // key={feature.id}
+            shadow="md"
+            radius="md"
+            className={classes.card}
+            padding="xl"
+          >
+            <Image src={feature} alt="image" width={200} height={200} />
+          </Card>
+        ))}
       </SimpleGrid>
+      {/* <Image src={feature} alt="image" width={50} height={50} /> */}
     </Container>
   );
 }
