@@ -2,7 +2,13 @@ import { Button, Container, Grid, Group, Image, Text } from "@mantine/core";
 import { TitleHead } from "../../component/Title";
 import image from "../../assets/desire.jpg";
 import classes from "./AboutUs.module.css";
+import { useState } from "react";
 
+interface Details {
+  id: number;
+  name: string;
+  about_me: string;
+}
 const details = [
   {
     id: 1,
@@ -24,7 +30,15 @@ const details = [
   },
 ];
 
+
+
 export const AboutUs = () => {
+  const [selectedItem, setSelectedItem] = useState<Details>();
+
+  const handleSelectedAboutMe = (item: Details) => {
+    setSelectedItem(item)
+
+  }
   return (
     <div>
       <TitleHead />
@@ -44,6 +58,7 @@ export const AboutUs = () => {
                 radius="xl"
                 size="md"
                 className={classes.control}
+                onClick={() => handleSelectedAboutMe(item)}
               >
                 {item.name}
               </Button>
@@ -51,7 +66,7 @@ export const AboutUs = () => {
           </div>
         ))}
       </div>
-      <div>
+      <div style={{ marginTop: "50px" }}>
         <Text className={classes.subTitle}>
           A Little About Me And My Passion
         </Text>
@@ -70,11 +85,7 @@ export const AboutUs = () => {
           </Grid.Col>
           <Grid.Col span={{ base: 12, xs: 8 }}>
             <Text>
-              When writing about "A Little About Me and My Passion," you want to
-              create a personal, engaging, and authentic description of who you
-              are, what drives you, and what excites you. Here are some terms
-              and phrases you can use, depending on the tone and style you're
-              aiming for:
+              {selectedItem?.about_me}
             </Text>
           </Grid.Col>
         </Grid>
