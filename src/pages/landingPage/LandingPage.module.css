@@ -18,10 +18,8 @@
 
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
-  font-size: 44px;
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 900;
   text-align: center;
@@ -33,14 +31,10 @@
 
 .developer {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
-  font-size: 80px;
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-size: 5.5rem;
   line-height: 1.2;
   font-weight: 900;
-
- 
 }
 
 .control {
