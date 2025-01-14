@@ -39,7 +39,8 @@
   font-weight: 900;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: 28px;
+    font-size: 48px;
+    text-align: center;
   }
 }
 .highlight {
