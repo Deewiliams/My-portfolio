@@ -4,7 +4,9 @@
   padding: calc(var(--mantine-spacing-xl) * 2);
   border-radius: var(--mantine-radius-md);
   /* background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8)); */
-  border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  border: 1px solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  justify-content: space-evenly;
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column-reverse;
@@ -31,11 +33,20 @@
 
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
-  line-height: 1;
-  margin-bottom: var(--mantine-spacing-md);
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: 900;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 28px;
+  }
+}
+.highlight {
+  position: relative;
+  background-color: var(--mantine-color-blue-light);
+  border-radius: var(--mantine-radius-sm);
+  padding: 4px 12px;
 }
 
 .controls {
@@ -57,4 +68,10 @@
 .control {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.controlButton {
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex: 1;
+  }
 }
