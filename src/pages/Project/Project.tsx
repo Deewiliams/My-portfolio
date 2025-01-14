@@ -4,38 +4,32 @@ import {
   IconFlame,
   IconReceiptOff,
 } from "@tabler/icons-react";
-import {
-  Grid,
-  SimpleGrid,
-  Text,
-  ThemeIcon,
-  Title,
-} from "@mantine/core";
+import { Grid, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core";
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
 
 const features = [
   {
     icon: IconReceiptOff,
-    title: "Free and open source",
+    title: "KLAPTON INSURANCE ZAMBIA",
     description:
       "All packages are published under MIT license, you can use Mantine in any project",
   },
   {
     icon: IconFileCode,
-    title: "TypeScript based",
+    title: "Z STUDY ",
     description:
       "Build type safe applications, all components and hooks export types",
   },
   {
     icon: IconCircleDotted,
-    title: "No annoying focus ring",
+    title: "OSENSE",
     description:
       "With new :focus-visible selector focus ring will appear only when user navigates with keyboard",
   },
   {
     icon: IconFlame,
-    title: "Flexible",
+    title: "VISION CREATIONS",
     description:
       "Customize colors, spacing, shadows, fonts and many other settings with global theme object",
   },
@@ -71,7 +65,6 @@ export function Project() {
               These projects were completed using the skills above, with the
               companies I've worked for, and with help from friends.
             </Title>
-            
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 7 }}>
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
