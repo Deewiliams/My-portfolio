@@ -24,7 +24,7 @@ const details = [
     id: 1,
     name: "Boi",
     about_me:
-      "I am a software developer with a passion for creating innovative and user-friendly applications. I have a strong background in computer science and have experience working with various programming languages and frameworks. I am constantly learning and expanding my skills to stay at the forefront of technology.",
+      "Hi, I’m Desire, a web developer specializing in front-end technologies. I build websites that help businesses solve problems and achieve their goals. My expertise includes JavaScript, React, HTML, and CSS. I handle everything from site layout and navigation to web hosting. I'm passionate about learning and am currently taking a course on building mobile apps with React Native. Outside of coding, I enjoy playing chess, exploring new technologies, and meeting new people.",
   },
   {
     id: 2,
@@ -93,76 +93,56 @@ export const AboutUs = () => {
             />
           </Grid.Col>
           <Grid.Col span={{ base: 12, xs: 8 }}>
-              {selectedItem?.name === "Boi" ? (
-               <List
-               mt={30}
-               spacing="sm"
-               size="sm"
-               icon={
-                 <ThemeIcon size={20} radius="xl">
-                   <IconCheck size={12} stroke={1.5} />
-                 </ThemeIcon>
-               }
-             >
-               <List.Item>
-                 <b>Boi</b> – build type safe applications, all
-                 components and hooks export types
-               </List.Item>
-               <List.Item>
-                 <b>Free and open source</b> – all packages have MIT license,
-                 you can use Mantine in any project
-               </List.Item>
-               <List.Item>
-                 <b>No annoying focus ring</b> – focus ring will appear only
-                 when user navigates with keyboard
-               </List.Item>
-             </List>
-              ) : selectedItem?.name === "Education" ? (
-                <List
-                  mt={30}
-                  spacing="sm"
-                  size="sm"
-                  icon={
-                    <ThemeIcon size={20} radius="xl">
-                      <IconCheck size={12} stroke={1.5} />
-                    </ThemeIcon>
-                  }
-                >
-                  <List.Item>
-                    <b>TypeScript based</b> – build type safe applications, all
-                    components and hooks export types
-                  </List.Item>
-                  <List.Item>
-                    <b>Free and open source</b> – all packages have MIT license,
-                    you can use Mantine in any project
-                  </List.Item>
-                  <List.Item>
-                    <b>No annoying focus ring</b> – focus ring will appear only
-                    when user navigates with keyboard
-                  </List.Item>
-                </List>
-              ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
-                <List
-                  mt={30}
-                  spacing="sm"
-                  size="sm"
-                  icon={
-                    <ThemeIcon size={20} radius="xl">
-                      <IconCheck size={12} stroke={1.5} />
-                    </ThemeIcon>
-                  }
-                >
-                  <List.Item>hello</List.Item>
-                  <List.Item>
-                    <b>Free and open source</b> – all packages have MIT license,
-                    you can use Mantine in any project
-                  </List.Item>
-                  <List.Item>
-                    <b>No annoying focus ring</b> – focus ring will appear only
-                    when user navigates with keyboard
-                  </List.Item>
-                </List>
-              ) : null}
+            {selectedItem?.name === "Boi" ? (
+              <Text fz="lg" mt="sm" fw={500}>
+                {selectedItem?.about_me}
+              </Text>
+            ) : selectedItem?.name === "Education" ? (
+              <List
+                mt={30}
+                spacing="sm"
+                size="sm"
+                icon={
+                  <ThemeIcon size={20} radius="xl">
+                    <IconCheck size={12} stroke={1.5} />
+                  </ThemeIcon>
+                }
+              >
+                <List.Item>
+                  <b>TypeScript based</b> – build type safe applications, all
+                  components and hooks export types
+                </List.Item>
+                <List.Item>
+                  <b>Free and open source</b> – all packages have MIT license,
+                  you can use Mantine in any project
+                </List.Item>
+                <List.Item>
+                  <b>No annoying focus ring</b> – focus ring will appear only
+                  when user navigates with keyboard
+                </List.Item>
+              </List>
+            ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
+              <List
+                mt={30}
+                spacing="sm"
+                size="sm"
+                icon={
+                  <ThemeIcon size={20} radius="xl">
+                    <IconCheck size={12} stroke={1.5} />
+                  </ThemeIcon>
+                }
+              >
+                <List.Item>hello</List.Item>
+                <List.Item>
+                  <b>Free and open source</b> – all packages have MIT license,
+                  you can use Mantine in any project
+                </List.Item>
+                <List.Item>
+                  <b>No annoying focus ring</b> – focus ring will appear only
+                  when user navigates with keyboard
+                </List.Item>
+              </List>
+            ) : null}
           </Grid.Col>
         </Grid>
       </Container>
