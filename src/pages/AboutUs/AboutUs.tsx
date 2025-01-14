@@ -94,7 +94,7 @@ export const AboutUs = () => {
           </Grid.Col>
           <Grid.Col span={{ base: 12, xs: 8 }}>
             {selectedItem?.name === "Boi" ? (
-              <Text fz="lg" mt="sm" fw={500}>
+              <Text fz="xl" mt="sm" fw={500}>
                 {selectedItem?.about_me}
               </Text>
             ) : selectedItem?.name === "Education" ? (
@@ -109,16 +109,13 @@ export const AboutUs = () => {
                 }
               >
                 <List.Item>
-                  <b>TypeScript based</b> – build type safe applications, all
-                  components and hooks export types
+                  <b>Diploma in computer studies</b> – from evelyn hone college of applied art and commerce in 2019
                 </List.Item>
                 <List.Item>
-                  <b>Free and open source</b> – all packages have MIT license,
-                  you can use Mantine in any project
+                <b>Advanced certificate in computer studies</b> – from evelyn hone college of applied art and commerce in 2017
                 </List.Item>
                 <List.Item>
-                  <b>No annoying focus ring</b> – focus ring will appear only
-                  when user navigates with keyboard
+                <b>Certificate in computer studies</b> – from evelyn hone college of applied art and commerce in 2016
                 </List.Item>
               </List>
             ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
