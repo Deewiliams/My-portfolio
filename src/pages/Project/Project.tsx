@@ -7,7 +7,9 @@ import {
 import { Grid, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core";
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
+import { Skeleton } from "@mantine/core";
 
+const child = <Skeleton height={140} radius="md" animate={false} />;
 const features = [
   {
     icon: IconReceiptOff,
@@ -17,7 +19,7 @@ const features = [
   },
   {
     icon: IconFileCode,
-    title: "Z STUDY ",
+    title: "Z-STUDY ",
     description:
       "Build type safe applications, all components and hooks export types",
   },
@@ -38,14 +40,18 @@ const features = [
 export function Project() {
   const items = features.map((feature) => (
     <div key={feature.title}>
-      <ThemeIcon
+         <Grid>
+          <Grid.Col span={{ base: 12, xs: 12 }}>{child}</Grid.Col>
+        </Grid>
+      {/* <ThemeIcon
         size={44}
         radius="md"
         variant="gradient"
         gradient={{ deg: 133, from: "blue", to: "cyan" }}
-      >
-        <feature.icon size={26} stroke={1.5} />
-      </ThemeIcon>
+      > */}
+       
+        {/* <feature.icon size={26} stroke={1.5} /> */}
+      {/* </ThemeIcon> */}
       <Text fz="lg" mt="sm" fw={500}>
         {feature.title}
       </Text>
