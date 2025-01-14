@@ -97,7 +97,7 @@ export function Project() {
         {feature.title}
       </Text>
       <Text c="dimmed" fz="sm">
-        {feature.description}
+        {/* {feature.description} */}
       </Text>
     </div>
   ));
