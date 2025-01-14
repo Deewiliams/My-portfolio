@@ -4,7 +4,15 @@ import {
   IconFlame,
   IconReceiptOff,
 } from "@tabler/icons-react";
-import { Grid, SimpleGrid, Text, Title } from "@mantine/core";
+import {
+  Button,
+  Card,
+  Grid,
+  Overlay,
+  SimpleGrid,
+  Text,
+  Title,
+} from "@mantine/core";
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
 import { Skeleton } from "@mantine/core";
@@ -40,17 +48,41 @@ const features = [
 export function Project() {
   const items = features.map((feature) => (
     <div key={feature.title}>
-         <Grid>
-          <Grid.Col span={{ base: 12, xs: 12 }}>{child}</Grid.Col>
-        </Grid>
+      <Grid>
+        <Grid.Col span={{ base: 12, xs: 12 }}>
+          <Card radius="md" className={classes.card}>
+            <Overlay className={classes.overlay} opacity={0.55} zIndex={0} />
+
+            <div className={classes.content}>
+              <Text size="lg" fw={700} className={classes.titleCard}>
+                Plan & save
+              </Text>
+
+              <Text size="sm" className={classes.description}>
+                Save up to 25% at Fifth Season Hotels in Europe, the Middle
+                East, Africa and Asia Pacific
+              </Text>
+
+              <Button
+                className={classes.action}
+                variant="white"
+                color="dark"
+                size="xs"
+              >
+                Book now
+              </Button>
+            </div>
+          </Card>
+        </Grid.Col>
+      </Grid>
       {/* <ThemeIcon
         size={44}
         radius="md"
         variant="gradient"
         gradient={{ deg: 133, from: "blue", to: "cyan" }}
       > */}
-       
-        {/* <feature.icon size={26} stroke={1.5} /> */}
+
+      {/* <feature.icon size={26} stroke={1.5} /> */}
       {/* </ThemeIcon> */}
       <Text fz="lg" mt="sm" fw={500}>
         {feature.title}
