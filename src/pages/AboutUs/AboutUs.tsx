@@ -22,7 +22,7 @@ interface DetailsProps {
 const details = [
   {
     id: 1,
-    name: "Bio",
+    name: "Boi",
     about_me:
       "I am a software developer with a passion for creating innovative and user-friendly applications. I have a strong background in computer science and have experience working with various programming languages and frameworks. I am constantly learning and expanding my skills to stay at the forefront of technology.",
   },
@@ -41,8 +41,9 @@ const details = [
 ];
 
 export const AboutUs = () => {
-  const [selectedItem, setSelectedItem] = useState<DetailsProps>();
+  const [selectedItem, setSelectedItem] = useState<DetailsProps>(details[0]);
 
+  console.log(selectedItem);
   const handleSelectedAboutMe = (item: DetailsProps) => {
     setSelectedItem(item);
   };
@@ -92,9 +93,30 @@ export const AboutUs = () => {
             />
           </Grid.Col>
           <Grid.Col span={{ base: 12, xs: 8 }}>
-            <Text>
               {selectedItem?.name === "Boi" ? (
-                <p>hello there</p>
+               <List
+               mt={30}
+               spacing="sm"
+               size="sm"
+               icon={
+                 <ThemeIcon size={20} radius="xl">
+                   <IconCheck size={12} stroke={1.5} />
+                 </ThemeIcon>
+               }
+             >
+               <List.Item>
+                 <b>Boi</b> – build type safe applications, all
+                 components and hooks export types
+               </List.Item>
+               <List.Item>
+                 <b>Free and open source</b> – all packages have MIT license,
+                 you can use Mantine in any project
+               </List.Item>
+               <List.Item>
+                 <b>No annoying focus ring</b> – focus ring will appear only
+                 when user navigates with keyboard
+               </List.Item>
+             </List>
               ) : selectedItem?.name === "Education" ? (
                 <List
                   mt={30}
@@ -141,7 +163,6 @@ export const AboutUs = () => {
                   </List.Item>
                 </List>
               ) : null}
-            </Text>
           </Grid.Col>
         </Grid>
       </Container>
