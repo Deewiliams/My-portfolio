@@ -15,9 +15,7 @@ import {
 } from "@mantine/core";
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
-import { Skeleton } from "@mantine/core";
 
-const child = <Skeleton height={140} radius="md" animate={false} />;
 const features = [
   {
     icon: IconReceiptOff,

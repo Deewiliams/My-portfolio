@@ -1,5 +1,4 @@
-import { Button, Group, Image, Text, TextInput, Title } from "@mantine/core";
-// import image from "./image.svg";
+import { Button, Group, Image, Title } from "@mantine/core";
 import classes from "./LandingPage.module.css";
 import coder from "../../assets/coder.svg";
 
