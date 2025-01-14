@@ -76,9 +76,7 @@ export const AboutUs = () => {
         ))}
       </div>
       <div style={{ marginTop: "50px" }}>
-        <Text className={classes.subTitle}>
-          A Little About Me And My Passion
-        </Text>
+        <Text className={classes.subTitle}>About Me and My Passion</Text>
       </div>
 
       <Container style={{ marginTop: "50px" }}>
