@@ -6,6 +6,7 @@ import { Header } from "./component/header/Header";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { Skills } from "./pages/Skills/Skills";
 import { Footer } from "./pages/Footer/Footer";
+import { Project } from "./pages/Project/Project";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <LandingPage />
       <AboutUs />
       <Skills />
+      <Project />
       <Footer />
     </MantineProvider>
   );

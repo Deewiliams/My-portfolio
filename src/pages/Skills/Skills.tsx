@@ -47,7 +47,6 @@ export function Skills() {
             </Card>
           ))}
         </SimpleGrid>
-        {/* <Image src={feature} alt="image" width={50} height={50} /> */}
       </Container>
     </>
   );
