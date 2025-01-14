@@ -18,6 +18,7 @@ import { TitleHead } from "../../component/Title";
 import kiz from "../../assets/Kiz.png";
 import vision from "../../assets/vision-background.png";
 import zstudy from "../../assets/Z-study.png";
+import osense from '../../assets/osense.png'
 
 const features = [
   {
@@ -39,7 +40,8 @@ const features = [
   {
     icon: IconCircleDotted,
     title: "OSENSE",
-    image: "",
+    image: osense,
+    link: 'https://www.app.osense.io/auth/register/email',
     description:
       "With new :focus-visible selector focus ring will appear only when user navigates with keyboard",
   },
