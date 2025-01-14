@@ -48,7 +48,7 @@
   height: 356px;
 
   @media (max-width: $mantine-breakpoint-md) {
-    display: none;
+    margin-top: 100px;
   }
 }
 
