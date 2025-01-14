@@ -4,16 +4,13 @@ import {
   Image,
   List,
   Text,
-  TextInput,
   ThemeIcon,
-  Title,
 } from "@mantine/core";
-// import image from "./image.svg";
 import classes from "./AboutMe.module.css";
 import { TitleHead } from "../../component/Title";
 import { useState } from "react";
 import { IconCheck } from "@tabler/icons-react";
-import image from "../../assets/desire.jpg";
+import image from "../../assets/desire.png";
 
 interface DetailsProps {
   id: number;
