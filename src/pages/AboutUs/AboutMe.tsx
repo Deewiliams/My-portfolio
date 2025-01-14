@@ -13,7 +13,7 @@ import classes from "./AboutMe.module.css";
 import { TitleHead } from "../../component/Title";
 import { useState } from "react";
 import { IconCheck } from "@tabler/icons-react";
-import image from "../../assets/desire.jpg"
+import image from "../../assets/desire.jpg";
 
 interface DetailsProps {
   id: number;
@@ -66,7 +66,7 @@ export function AboutMe() {
                 variant="default"
                 radius="xl"
                 size="md"
-                className={classes.control}
+                // className={classes.control}
                 onClick={() => handleSelectedAboutMe(item)}
               >
                 {item.name}
