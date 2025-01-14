@@ -4,7 +4,7 @@ import {
   IconFlame,
   IconReceiptOff,
 } from "@tabler/icons-react";
-import { Grid, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core";
+import { Grid, SimpleGrid, Text, Title } from "@mantine/core";
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
 import { Skeleton } from "@mantine/core";
