@@ -101,7 +101,7 @@ export const AboutUs = () => {
               <List
                 mt={30}
                 spacing="sm"
-                size="sm"
+                size="xl"
                 icon={
                   <ThemeIcon size={20} radius="xl">
                     <IconCheck size={12} stroke={1.5} />
@@ -109,35 +109,32 @@ export const AboutUs = () => {
                 }
               >
                 <List.Item>
-                  <b>Diploma in computer studies</b> – from evelyn hone college of applied art and commerce in 2019
+                  <b>Diploma in computer studies</b> – from evelyn hone college
+                  of applied art and commerce in 2018
                 </List.Item>
                 <List.Item>
-                <b>Advanced certificate in computer studies</b> – from evelyn hone college of applied art and commerce in 2017
+                  <b>Advanced certificate in computer studies</b> – from evelyn
+                  hone college of applied art and commerce in 2017
                 </List.Item>
                 <List.Item>
-                <b>Certificate in computer studies</b> – from evelyn hone college of applied art and commerce in 2016
+                  <b>Certificate in computer studies</b> – from evelyn hone
+                  college of applied art and commerce in 2016
                 </List.Item>
               </List>
             ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
               <List
                 mt={30}
                 spacing="sm"
-                size="sm"
+                size="xl"
                 icon={
                   <ThemeIcon size={20} radius="xl">
                     <IconCheck size={12} stroke={1.5} />
                   </ThemeIcon>
                 }
               >
-                <List.Item>hello</List.Item>
-                <List.Item>
-                  <b>Free and open source</b> – all packages have MIT license,
-                  you can use Mantine in any project
-                </List.Item>
-                <List.Item>
-                  <b>No annoying focus ring</b> – focus ring will appear only
-                  when user navigates with keyboard
-                </List.Item>
+                <List.Item>2 Years Work Experience as programmer</List.Item>
+                <List.Item>Programming as front end developer</List.Item>
+                <List.Item>Expert knowledge of front end languages</List.Item>
               </List>
             ) : null}
           </Grid.Col>
