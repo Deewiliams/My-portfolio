@@ -4,7 +4,8 @@ import coder from "../../assets/coder.svg";
 
 export function LandingPage() {
   return (
-    <Container my="md" style={{ marginTop: "150px" }}>
+    <Container my="md">
+         <div className={classes.inner}>
       <Grid>
         <Grid.Col span={{ base: 12, xs: 6 }}>
           <div className={classes.content}>
@@ -32,6 +33,7 @@ export function LandingPage() {
           <Image src={coder} className={classes.image} />
         </Grid.Col>
       </Grid>
+      </div>
     </Container>
   );
 }

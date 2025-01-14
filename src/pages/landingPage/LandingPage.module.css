@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   padding-bottom: calc(var(--mantine-spacing-xl) * 4);
-  margin-top: -50px;
+  /* margin-top: 150px; */
 }
 
 .content {
@@ -45,7 +45,7 @@
 
 .image {
   width: 450px;
-  height: 356px;
+  height: 350px;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: 100px;
