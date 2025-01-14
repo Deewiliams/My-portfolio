@@ -47,7 +47,7 @@ export function AboutMe() {
   };
   return (
     <div>
-      <TitleHead title="About Us" />
+      <TitleHead title="About Me" />
       <div
         style={{
           display: "flex",
