@@ -90,7 +90,9 @@ export function Header() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           {/* <MantineLogo size={30} /> */}
-          Desire Irankunda
+         <Text fz="30px" >
+         Desire Irankunda
+         </Text>
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="#" className={classes.link}>
               Home
