@@ -7,7 +7,7 @@ export function LandingPage() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title>
+        <Title style={{textAlign: 'center'}}>
           <span className={classes.highlight}>Innovative</span>
         </Title>
         <Title className={classes.title}>Developer</Title>
