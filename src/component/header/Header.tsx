@@ -1,5 +1,5 @@
 import { Box, Group, Text } from "@mantine/core";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-scroll";
 import classes from "./Header.module.css";
 
 export function Header() {

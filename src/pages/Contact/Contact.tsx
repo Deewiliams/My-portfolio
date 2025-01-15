@@ -6,7 +6,6 @@ import {
   SimpleGrid,
   Textarea,
   TextInput,
-  Title,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { TitleHead } from "../../component/Title";
@@ -29,10 +28,9 @@ export function Contact() {
   return (
     <Container my="md">
       <Grid>
-        <Grid.Col span={{ base: 12, xs: 12 }}>
+        <Grid.Col span={{ base: 12, xs: 12 }} style={{marginTop: '-50px'}}>
           <form onSubmit={form.onSubmit(() => {})}>
-           <TitleHead title="Contact" />
-
+           <TitleHead title="Contact Me" />
             <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
               <TextInput
                 label="Name"
