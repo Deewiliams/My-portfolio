@@ -18,7 +18,7 @@ export function Header() {
               Home
             </Link>
             <Link
-              to="about_me" // The ID of the Project section
+              to="about_me"
               smooth={true}
               duration={500}
               className={classes.link}
@@ -27,7 +27,7 @@ export function Header() {
             </Link>
 
             <Link
-              to="skills" // The ID of the Project section
+              to="skills"
               smooth={true}
               duration={500}
               className={classes.link}
@@ -36,7 +36,7 @@ export function Header() {
             </Link>
 
             <Link
-              to="projects" // The ID of the Project section
+              to="projects"
               smooth={true}
               duration={500}
               className={classes.link}
@@ -44,7 +44,7 @@ export function Header() {
               My Project
             </Link>
             <Link
-              to="contact" // The ID of the ContactMe section
+              to="contact"
               smooth={true}
               duration={500}
               className={classes.link}
