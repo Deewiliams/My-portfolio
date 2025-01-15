@@ -12,11 +12,21 @@ function App() {
   return (
     <MantineProvider defaultColorScheme="dark">
       <Header />
-      <LandingPage />
-      <AboutMe />
-      <Skills />
-      <Project />
-      <Footer />
+      <div id="landing">
+        <LandingPage />
+      </div>
+      <div id="aboutMe">
+        <AboutMe />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Project />
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
     </MantineProvider>
   );
 }
