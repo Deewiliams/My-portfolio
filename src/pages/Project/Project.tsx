@@ -18,7 +18,7 @@ import { TitleHead } from "../../component/Title";
 import kiz from "../../assets/Kiz.png";
 import vision from "../../assets/vision-background.png";
 import zstudy from "../../assets/Z-study.png";
-import osense from '../../assets/osense.png'
+import osense from "../../assets/osense.png";
 
 const features = [
   {
@@ -27,7 +27,7 @@ const features = [
     link: "https://app.kiz.co.zm/insure/motor/step/1",
     image: kiz,
     description:
-      "All packages are published under MIT license, you can use Mantine in any project",
+      "A Zambian insurance company provides insurance products in Zambia. KIZ’s main business objective is to serve the end consumer with superior products.",
   },
   {
     icon: IconFileCode,
@@ -35,15 +35,15 @@ const features = [
     link: "https://web.zstudy.co/#/login",
     image: zstudy,
     description:
-      "Build type safe applications, all components and hooks export types",
+      "ZStudy is an EdTech platform offering learner-centered digital tools, AI-powered features, and a virtual lab for students.",
   },
   {
     icon: IconCircleDotted,
     title: "OSENSE",
     image: osense,
-    link: 'https://www.app.osense.io/auth/register/email',
+    link: "https://www.app.osense.io/auth/register/email",
     description:
-      "With new :focus-visible selector focus ring will appear only when user navigates with keyboard",
+      "O'Sense is a web app that tracks employee work hours, monitors fuel usage, and manages inventory.",
   },
   {
     icon: IconFlame,
@@ -51,7 +51,7 @@ const features = [
     link: "https://vision-creations-rho.vercel.app/",
     image: vision,
     description:
-      "Customize colors, spacing, shadows, fonts and many other settings with global theme object",
+      "Vision Creations is a web app where users can browse a photographer's portfolio and book a session or event.",
   },
 ];
 
@@ -97,7 +97,7 @@ export function Project() {
         {feature.title}
       </Text>
       <Text c="dimmed" fz="sm">
-        {/* {feature.description} */}
+        {feature.description}
       </Text>
     </div>
   ));
