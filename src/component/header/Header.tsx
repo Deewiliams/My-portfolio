@@ -1,12 +1,8 @@
-import { IconChevronDown } from "@tabler/icons-react";
-import { Box, Group, HoverCard, Center, Divider, Text } from "@mantine/core";
+import { Box, Group, Text } from "@mantine/core";
 import { Link } from "react-scroll"; // Import Link from react-scroll
-import { useMantineTheme } from "@mantine/core";
 import classes from "./Header.module.css";
 
 export function Header() {
-  const theme = useMantineTheme();
-
   return (
     <Box pb={120}>
       <header className={classes.header}>
@@ -21,9 +17,24 @@ export function Header() {
             >
               Home
             </Link>
-              
+            <Link
+              to="about_me" // The ID of the Project section
+              smooth={true}
+              duration={500}
+              className={classes.link}
+            >
+              About Me
+            </Link>
 
-              
+            <Link
+              to="skills" // The ID of the Project section
+              smooth={true}
+              duration={500}
+              className={classes.link}
+            >
+              Skills
+            </Link>
+
             <Link
               to="projects" // The ID of the Project section
               smooth={true}

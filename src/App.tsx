@@ -15,7 +15,7 @@ function App() {
       <div id="landing">
         <LandingPage />
       </div>
-      <div id="aboutMe">
+      <div id="about_me">
         <AboutMe />
       </div>
       <div id="skills">
