@@ -7,13 +7,13 @@ export function LandingPage() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title style={{textAlign: 'center'}}>
+        <Title style={{ textAlign: "center" }}>
           <span className={classes.highlight}>Innovative</span>
         </Title>
         <Title className={classes.title}>Developer</Title>
         <Group mt={30}>
           <Button radius="xl" size="md" className={classes.controlButton}>
-          <Link
+            <Link
               to="contact"
               smooth={true}
               duration={500}
@@ -28,7 +28,9 @@ export function LandingPage() {
             size="md"
             className={classes.controlButton}
           >
-            Download PDF
+            <a style={{textDecoration: 'none', color: 'white'}} href="https://docs.google.com/document/d/e/2PACX-1vQ34DyMLr7y2Puq3eJ23eJ1Qk9UJ7q1H6SwVmFruBhYIBiLKqFmo07KZEA4cs5PHSHL6v3IGN6cORTE/pub">
+              Download PDF
+            </a>
           </Button>
         </Group>
       </div>
