@@ -57,6 +57,11 @@ export function AboutMe() {
                 size="md"
                 // className={classes.control}
                 onClick={() => handleSelectedAboutMe(item)}
+                style={{
+                  backgroundColor: selectedItem.id === item.id ? "#7f75f7" : "", // Highlight color (green here)
+                  color: selectedItem.id === item.id ? "white" : "", // Change text color
+                  // borderColor: selectedItem.id === item.id ? "#4caf50" : "", // Change border color
+                }}
               >
                 {item.name}
               </Button>
