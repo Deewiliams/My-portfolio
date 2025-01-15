@@ -10,7 +10,7 @@ export function Header() {
           <Text fz="30px">Desire Irankunda</Text>
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link
-              to="landing" // The ID of the LandingPage section
+              to="landing"
               smooth={true}
               duration={500}
               className={classes.link}
