@@ -7,6 +7,7 @@ import { Skills } from "./pages/Skills/Skills";
 import { Footer } from "./pages/Footer/Footer";
 import { Project } from "./pages/Project/Project";
 import { AboutMe } from "./pages/AboutUs/AboutMe";
+import { Contact } from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
       </div>
       <div id="projects">
         <Project />
+      </div>
+      <div id="contact">
+        <Contact />
       </div>
       <div id="footer">
         <Footer />
