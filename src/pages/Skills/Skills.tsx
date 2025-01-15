@@ -37,7 +37,7 @@ export function Skills() {
         <SimpleGrid cols={{ base: 1, md: 4 }} spacing="xl" mt={-80}>
           {mockdata.map((feature) => (
             <Card
-              // key={feature.id}
+              key={feature}
               shadow="md"
               radius="md"
               className={classes.card}

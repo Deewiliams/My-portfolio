@@ -9,8 +9,14 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { TitleHead } from "../../component/Title";
+import { useState } from "react";
+// import { useForm, ValidationError } from '@formspree/react';
 
 export function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
   const form = useForm({
     initialValues: {
       name: "",
@@ -25,24 +31,70 @@ export function Contact() {
     },
   });
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    form.validate();
+
+    if (!form.isValid()) {
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mwppzqop", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.values.name,
+          email: form.values.email,
+          subject: form.values.subject,
+          message: form.values.message,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+    //   const data = await response.json();
+      // If successful, show a success message and reset the form
+      if (response.ok) {
+        setSuccessMessage(
+          "Thank you for your message! We will get back to you soon."
+        );
+        form.reset(); // Reset form fields after successful submission
+      } else {
+        setError("There was an error with the submission.");
+      }
+    } catch (error: unknown) {
+      setLoading(false);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container my="md">
       <Grid>
-        <Grid.Col span={{ base: 12, xs: 12 }} style={{marginTop: '-50px'}}>
-          <form onSubmit={form.onSubmit(() => {})}>
-           <TitleHead title="Contact Me" />
+        <Grid.Col span={{ base: 12, xs: 12 }} style={{ marginTop: "-50px" }}>
+          <form onSubmit={handleSubmit}>
+            <TitleHead title="Contact Me" />
             <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
               <TextInput
                 label="Name"
                 placeholder="Your name"
-                size="lg" 
+                size="lg"
                 name="name"
                 variant="filled"
                 {...form.getInputProps("name")}
               />
               <TextInput
                 label="Email"
-                size="lg" 
+                size="lg"
                 placeholder="Your email"
                 name="email"
                 variant="filled"
@@ -52,7 +104,7 @@ export function Contact() {
 
             <TextInput
               label="Subject"
-              size="lg" 
+              size="lg"
               placeholder="Subject"
               mt="md"
               name="subject"
@@ -61,7 +113,7 @@ export function Contact() {
             />
             <Textarea
               mt="md"
-              size="lg" 
+              size="lg"
               label="Message"
               placeholder="Your message"
               maxRows={10}
@@ -73,7 +125,12 @@ export function Contact() {
             />
 
             <Group justify="center" mt="xl">
-              <Button type="submit" size="md">
+              <Button
+                type="submit"
+                size="md"
+                loading={loading}
+                disabled={loading}
+              >
                 Send message
               </Button>
             </Group>

@@ -1,11 +1,4 @@
-import {
-  Button,
-  Group,
-  Image,
-  List,
-  Text,
-  ThemeIcon,
-} from "@mantine/core";
+import { Button, Group, Image, List, Text, ThemeIcon } from "@mantine/core";
 import classes from "./AboutMe.module.css";
 import { TitleHead } from "../../component/Title";
 import { useState } from "react";
@@ -41,7 +34,6 @@ const details = [
 export function AboutMe() {
   const [selectedItem, setSelectedItem] = useState<DetailsProps>(details[0]);
 
-  console.log(selectedItem);
   const handleSelectedAboutMe = (item: DetailsProps) => {
     setSelectedItem(item);
   };
