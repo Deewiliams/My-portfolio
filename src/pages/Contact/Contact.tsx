@@ -4,18 +4,18 @@ import {
   Grid,
   Group,
   SimpleGrid,
+  Text,
   Textarea,
   TextInput,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { TitleHead } from "../../component/Title";
 import { useState } from "react";
-// import { useForm, ValidationError } from '@formspree/react';
+import { toast } from "react-toastify";
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const form = useForm({
     initialValues: {
@@ -28,6 +28,7 @@ export function Contact() {
       name: (value) => value.trim().length < 2,
       email: (value) => !/^\S+@\S+$/.test(value),
       subject: (value) => value.trim().length === 0,
+      message: (value) => value.trim().length === 0,
     },
   });
 
@@ -60,13 +61,18 @@ export function Contact() {
         throw new Error("Network response was not ok");
       }
 
-    //   const data = await response.json();
-      // If successful, show a success message and reset the form
       if (response.ok) {
-        setSuccessMessage(
-          "Thank you for your message! We will get back to you soon."
+        toast.success(
+          "Thank you for your message! We will get back to you soon.",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+          }
         );
-        form.reset(); // Reset form fields after successful submission
+        form.reset();
       } else {
         setError("There was an error with the submission.");
       }
@@ -83,6 +89,11 @@ export function Contact() {
         <Grid.Col span={{ base: 12, xs: 12 }} style={{ marginTop: "-50px" }}>
           <form onSubmit={handleSubmit}>
             <TitleHead title="Contact Me" />
+            {error && (
+              <Text color="red" size="sm" ta="center" mt={10}>
+                {error}
+              </Text>
+            )}
             <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
               <TextInput
                 label="Name"
