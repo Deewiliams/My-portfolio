@@ -21,10 +21,11 @@ export function Footer() {
           wrap="nowrap"
         >
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandInstagram size={40} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <a href="https://github.com/Deewiliams" target="_blank">
+            <a
+              href="https://github.com/Deewiliams"
+              target="_blank"
+              style={{ textDecoration: "none", color: "white" }}
+            >
               <IconBrandGithub size={40} stroke={1.5} />
             </a>
           </ActionIcon>
@@ -33,6 +34,7 @@ export function Footer() {
               href="https://web.facebook.com/irankunda1"
               target="_blank"
               rel="noreferrer"
+              style={{ textDecoration: "none", color: "white" }}
             >
               <IconBrandFacebook size={40} stroke={1.5} />
             </a>
@@ -42,6 +44,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/desire-irankunda-0a8490183/"
               target="_blank"
               rel="noreferrer"
+              style={{ textDecoration: "none", color: "white" }}
             >
               <IconBrandLinkedin size={40} stroke={1.5} />
             </a>
