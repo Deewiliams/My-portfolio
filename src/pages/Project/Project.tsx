@@ -51,7 +51,7 @@ const features = [
     link: "https://vision-creations-rho.vercel.app/",
     image: vision,
     description:
-      "Vision Creations is a web app where users can browse a photographer's portfolio and book a session or event.",
+      "Vision Creations is a web app where users can browse a photos and book a session or event.",
   },
 ];
 
