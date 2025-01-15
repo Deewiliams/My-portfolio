@@ -1,6 +1,7 @@
 import { Button, Group, Image, Title } from "@mantine/core";
 import classes from "./LandingPage.module.css";
 import coder from "../../assets/coder.svg";
+import { Link } from "react-scroll";
 
 export function LandingPage() {
   return (
@@ -12,7 +13,14 @@ export function LandingPage() {
         <Title className={classes.title}>Developer</Title>
         <Group mt={30}>
           <Button radius="xl" size="md" className={classes.controlButton}>
-            Hire Me
+          <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className={classes.link}
+            >
+              Hire Me
+            </Link>
           </Button>
           <Button
             variant="default"
