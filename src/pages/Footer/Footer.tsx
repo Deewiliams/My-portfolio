@@ -1,6 +1,5 @@
 import {
   IconBrandGithub,
-  IconBrandInstagram,
   IconBrandFacebook,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
