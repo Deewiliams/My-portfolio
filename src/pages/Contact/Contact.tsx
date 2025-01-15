@@ -11,7 +11,7 @@ import {
 import { useForm } from "@mantine/form";
 import { TitleHead } from "../../component/Title";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
@@ -63,9 +63,9 @@ export function Contact() {
 
       if (response.ok) {
         toast.success(
-          "Thank you for your message! We will get back to you soon.",
+          "Thank you for your message! I will get back to you soon.",
           {
-            position: "top-right",
+            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -144,6 +144,7 @@ export function Contact() {
               >
                 Send message
               </Button>
+              <ToastContainer />
             </Group>
           </form>
         </Grid.Col>
