@@ -28,7 +28,10 @@ export function LandingPage() {
             size="md"
             className={classes.controlButton}
           >
-            <a style={{textDecoration: 'none', color: 'white'}} href="https://docs.google.com/document/d/e/2PACX-1vQ34DyMLr7y2Puq3eJ23eJ1Qk9UJ7q1H6SwVmFruBhYIBiLKqFmo07KZEA4cs5PHSHL6v3IGN6cORTE/pub">
+            <a
+              style={{ textDecoration: "none", color: "white" }}
+              href="https://docs.google.com/document/d/e/2PACX-1vSdia_YJhbTWRcT3VYx9INbByTqKUmFFISxyDHoQA4PdYJTqxex94mBkNK17fAP3Rw8fMl-Xh1i_DPs/pub"
+            >
               Download PDF
             </a>
           </Button>
