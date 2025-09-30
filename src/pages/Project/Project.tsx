@@ -1,7 +1,7 @@
 import {
   IconCircleDotted,
   IconFileCode,
-  IconFlame,
+  // IconFlame,
   IconReceiptOff,
 } from "@tabler/icons-react";
 import {
@@ -16,7 +16,7 @@ import {
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
 import kiz from "../../assets/Kiz.png";
-import vision from "../../assets/vision-background.png";
+// import vision from "../../assets/vision-background.png";
 import zstudy from "../../assets/Z-study.png";
 import osense from "../../assets/osense.png";
 
