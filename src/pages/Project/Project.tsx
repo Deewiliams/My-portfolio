@@ -45,14 +45,14 @@ const features = [
     description:
       "O'Sense is a web app that tracks employee work hours, monitors fuel usage, and manages inventory.",
   },
-  {
-    icon: IconFlame,
-    title: "VISION CREATIONS",
-    link: "https://vision-creations-rho.vercel.app/",
-    image: vision,
-    description:
-      "Vision Creations is a web app where users can browse a photos and book a session or event.",
-  },
+  // {
+  //   icon: IconFlame,
+  //   title: "VISION CREATIONS",
+  //   link: "https://vision-creations-rho.vercel.app/",
+  //   image: vision,
+  //   description:
+  //     "Vision Creations is a web app where users can browse a photos and book a session or event.",
+  // },
 ];
 
 export function Project() {
