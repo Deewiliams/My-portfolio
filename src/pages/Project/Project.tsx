@@ -1,7 +1,6 @@
 import {
   IconCircleDotted,
   IconFileCode,
-  // IconFlame,
   IconReceiptOff,
 } from "@tabler/icons-react";
 import {
@@ -16,7 +15,6 @@ import {
 import classes from "./Project.module.css";
 import { TitleHead } from "../../component/Title";
 import kiz from "../../assets/Kiz.png";
-// import vision from "../../assets/vision-background.png";
 import zstudy from "../../assets/Z-study.png";
 import osense from "../../assets/osense.png";
 
@@ -46,14 +44,6 @@ const features = [
     description:
       "O'Sense is a web app that tracks employee work hours, monitors fuel usage, and manages inventory.",
   },
-  // {
-  //   icon: IconFlame,
-  //   title: "VISION CREATIONS",
-  //   link: "https://vision-creations-rho.vercel.app/",
-  //   image: vision,
-  //   description:
-  //     "Vision Creations is a web app where users can browse a photos and book a session or event.",
-  // },
 ];
 
 export function Project() {

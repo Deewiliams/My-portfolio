@@ -92,10 +92,6 @@ export function AboutMe() {
             }
           >
             <List.Item>
-              <b>Diploma in computer studies</b> – from evelyn hone college of
-              applied art and commerce in 2018
-            </List.Item>
-            <List.Item>
               <b>Advanced certificate in computer studies</b> – from evelyn hone
               college of applied art and commerce in 2017
             </List.Item>
