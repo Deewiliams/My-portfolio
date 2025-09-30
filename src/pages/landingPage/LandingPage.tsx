@@ -27,13 +27,12 @@ export function LandingPage() {
             radius="xl"
             size="md"
             className={classes.controlButton}
+            component="a"
+            href="https://docs.google.com/document/d/e/2PACX-1vSr7xGrKk919RvAiH_7ubtD5Y4dzaHJlehO9pWv-GEsfmJN_F-zpKvbDy_DrIpXlUOYPuH6YxToJxyV/pub"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a
-              style={{ textDecoration: "none", color: "white" }}
-              href="https://docs.google.com/document/d/e/2PACX-1vSr7xGrKk919RvAiH_7ubtD5Y4dzaHJlehO9pWv-GEsfmJN_F-zpKvbDy_DrIpXlUOYPuH6YxToJxyV/pub"
-            >
-              Download PDF
-            </a>
+            Download PDF
           </Button>
         </Group>
       </div>
