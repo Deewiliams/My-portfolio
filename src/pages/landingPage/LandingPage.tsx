@@ -30,7 +30,7 @@ export function LandingPage() {
           >
             <a
               style={{ textDecoration: "none", color: "white" }}
-              href="https://docs.google.com/document/d/e/2PACX-1vSdia_YJhbTWRcT3VYx9INbByTqKUmFFISxyDHoQA4PdYJTqxex94mBkNK17fAP3Rw8fMl-Xh1i_DPs/pub"
+              href="https://docs.google.com/document/d/e/2PACX-1vSr7xGrKk919RvAiH_7ubtD5Y4dzaHJlehO9pWv-GEsfmJN_F-zpKvbDy_DrIpXlUOYPuH6YxToJxyV/pub"
             >
               Download PDF
             </a>
