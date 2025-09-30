@@ -22,14 +22,6 @@ import osense from "../../assets/osense.png";
 
 const features = [
   {
-    icon: IconReceiptOff,
-    title: "KLAPTON INSURANCE ZAMBIA",
-    link: "https://app.kiz.co.zm/insure/motor/step/1",
-    image: kiz,
-    description:
-      "A Zambian insurance company provides insurance products in Zambia. KIZ’s main business objective is to serve the end consumer with superior products.",
-  },
-  {
     icon: IconFileCode,
     title: "Z-STUDY ",
     link: "https://web.zstudy.co/#/login",
@@ -37,6 +29,15 @@ const features = [
     description:
       "ZStudy is an EdTech platform offering learner-centered digital tools, AI-powered features, and a virtual lab for students.",
   },
+  {
+    icon: IconReceiptOff,
+    title: "KLAPTON INSURANCE ZAMBIA",
+    link: "https://app.kiz.co.zm/insure/motor/step/1",
+    image: kiz,
+    description:
+      "A Zambian insurance company provides insurance products in Zambia. KIZ’s main business objective is to serve the end consumer with superior products.",
+  },
+
   {
     icon: IconCircleDotted,
     title: "OSENSE",
