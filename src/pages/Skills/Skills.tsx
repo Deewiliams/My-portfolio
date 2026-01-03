@@ -33,9 +33,8 @@ const skills = [
 export function Skills() {
   return (
     <>
-      <TitleHead title="My Skills" />
-
-      <Container size="lg" py="xl">
+      <TitleHead title="My Skills"/>
+      <Container size="lg" >
         <Text ta="center" c="dimmed" mb="xl">
           Technologies and tools I use to build modern, scalable, and
           user-friendly applications.
