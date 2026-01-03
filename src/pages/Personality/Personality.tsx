@@ -14,9 +14,9 @@ import { TitleHead } from "../../component/Title";
 
 export function Personality() {
   return (
-    <Box mb="xl">
+    <Box>
       <TitleHead title="My Style & Mindset" />
-      <Container size="sm" style={{ marginBottom: "70px" }}>
+      <Container size="sm" style={{ marginBottom: "90px" }}>
         {/* Personal headline */}
         <Text ta="center" fz="lg" fw={500}>
           I don’t just write code — I solve problems thoughtfully.
