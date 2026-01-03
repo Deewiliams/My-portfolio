@@ -7,22 +7,21 @@ import {
   List,
   ThemeIcon,
   Card,
+  Box,
 } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 import { TitleHead } from "../../component/Title";
 
 export function Personality() {
   return (
-    <>
+    <Box mb="xl">
       <TitleHead title="My Style & Mindset" />
-
-      <Container size="md" py="xl">
+      <Container size="sm" style={{ marginBottom: "70px" }}>
         {/* Personal headline */}
         <Text ta="center" fz="lg" fw={500}>
           I don’t just write code — I solve problems thoughtfully.
         </Text>
-
-        <Text ta="center" c="dimmed" mt="sm">
+        <Text ta="center" c="dimmed" >
           My work blends logic, creativity, and empathy to build meaningful
           digital experiences.
         </Text>
@@ -30,11 +29,11 @@ export function Personality() {
         {/* Personality tags */}
         <Group justify="center" mt="lg">
           {[
-            "♟ Strategic Thinker",
-            "🚀 Lifelong Learner",
-            "💡 Problem Solver",
-            "🎨 UI Enthusiast",
-            "🤝 Team Player",
+            " Strategic Thinker",
+            " Lifelong Learner",
+            " Problem Solver",
+            " UI Enthusiast",
+            " Team Player",
           ].map((trait) => (
             <Button
               key={trait}
@@ -75,6 +74,6 @@ export function Personality() {
           Built with ❤️ by Desire using React & Mantine
         </Text>
       </Container>
-    </>
+    </Box>
   );
 }
