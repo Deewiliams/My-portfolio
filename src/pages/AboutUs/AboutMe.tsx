@@ -152,29 +152,53 @@ export function AboutMe() {
 
         {/* PROJECTS */}
         {selectedItem.name === "Projects" && (
-          <List
-            mt="md"
-            spacing="sm"
-            size="lg"
-            icon={
-              <ThemeIcon size={20} radius="xl" color="violet">
-                <IconCheck size={12} />
-              </ThemeIcon>
-            }
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}
           >
-            <List.Item>
-              <b>Osense App</b> – Role-based web application with authentication
-              and admin management
-            </List.Item>
-            <List.Item>
-              <b>Quiz Game (React + Electron)</b> – Desktop quiz game with sound
-              effects and category logic
-            </List.Item>
-            <List.Item>
-              <b>Virtual Labs Platform</b> – Offline-first Electron app with
-              sync and update system
-            </List.Item>
-          </List>
+            {[
+              {
+                title: "Mental Health App (Mobile)",
+                desc:
+                  "Cross-platform mobile application focused on mental health support, with user onboarding, secure authentication, and self-reflection questionnaires. Built with React Native, Expo, and TypeScript.",
+              },
+              {
+                title: "Osense App (Web)",
+                desc:
+                  "Role-based web application with authentication, admin management, and reusable dashboards/forms. Integrated AWS Amplify + GraphQL for secure data access.",
+              },
+              {
+                title: "Klapton Insurance Platform (Web)",
+                desc:
+                  "Responsive insurance platform with claim submission forms, user portals, and backend API integration. Built with Remix, TypeScript, and Golang.",
+              },
+              {
+                title: "Harvest (Web)",
+                desc:
+                  "Marketing and vendor management platform with responsive UI components and vendor store workflows. Developed using React.js, TypeScript, and Material UI.",
+              },
+            ].map((proj, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "0.5rem",
+                }}
+              >
+                <ThemeIcon
+                  size={20}
+                  radius="xl"
+                  color="violet"
+                  style={{ marginTop: 4 }}
+                >
+                  <IconCheck size={12} />
+                </ThemeIcon>
+                <div>
+                  <b>{proj.title}</b> – {proj.desc}
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </div>
