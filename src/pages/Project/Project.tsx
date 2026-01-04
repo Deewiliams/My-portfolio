@@ -127,7 +127,7 @@ export function Project() {
                     {project.description}
                   </Text>
 
-                  <Group spacing={6}>
+                  <Group>
                     {project.stack.map((tech) => (
                       <Badge key={tech} size="xs" variant="light">
                         {tech}

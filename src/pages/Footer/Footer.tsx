@@ -10,11 +10,11 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Text color="white" weight={500}>
+        <Text c="white" w={500}>
           Desire Irankunda
         </Text>
 
-        <Group spacing="md">
+        <Group >
           <Tooltip label="GitHub" position="top" withArrow>
             <ActionIcon
               size="lg"
