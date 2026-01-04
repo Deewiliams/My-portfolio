@@ -1,121 +1,205 @@
 import { Button, Group, Image, List, Text, ThemeIcon } from "@mantine/core";
-import classes from "./AboutMe.module.css";
-import { TitleHead } from "../../component/Title";
 import { useState } from "react";
 import { IconCheck } from "@tabler/icons-react";
+import classes from "./AboutMe.module.css";
+import { TitleHead } from "../../component/Title";
 import image from "../../assets/desire.png";
 
 interface DetailsProps {
   id: number;
   name: string;
-  about_me: string;
+  about_me?: string;
 }
-const details = [
+
+const details: DetailsProps[] = [
   {
     id: 1,
-    name: "Boi",
-    about_me:
-      "Hi, I’m Desire, a web developer specializing in front-end technologies. I build websites that help businesses solve problems and achieve their goals. My expertise includes JavaScript, React, HTML, and CSS. I handle everything from site layout and navigation to web hosting. I'm passionate about learning and am currently taking a course on building mobile apps with React Native. Outside of coding, I enjoy playing chess, exploring new technologies, and meeting new people.",
+    name: "Profile",
+    about_me: `
+Hi, I’m Desire — a front-end web developer who builds clean, user-friendly
+interfaces that solve real problems.
+
+I specialize in JavaScript and React, with hands-on experience using Mantine UI,
+HTML, and CSS. I enjoy turning ideas into responsive, accessible, and visually
+appealing applications.
+
+Currently, I’m expanding my skill set into mobile app development using
+React Native. Outside of coding, I enjoy playing chess, exploring new
+technologies, and meeting new people.
+    `,
   },
   {
     id: 2,
     name: "Education",
-    about_me:
-      "I have a strong background in computer science and have experience working with various programming languages and frameworks. I am constantly learning and expanding my skills to stay at the forefront of technology.",
   },
   {
     id: 3,
     name: "Experience",
-    about_me:
-      "I have a strong background in computer science and have experience working with various programming languages and frameworks. I am constantly learning and expanding my skills to stay at the forefront of technology.",
+  },
+  {
+    id: 4,
+    name: "Projects",
   },
 ];
 
 export function AboutMe() {
   const [selectedItem, setSelectedItem] = useState<DetailsProps>(details[0]);
 
-  const handleSelectedAboutMe = (item: DetailsProps) => {
-    setSelectedItem(item);
-  };
   return (
     <div>
       <TitleHead title="About Me" />
-      <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          justifyContent: "center",
-          marginTop: "-50px",
-        }}
-      >
+
+      {/* Tabs */}
+      <Group justify="center" mt={-40} mb="xl">
         {details.map((item) => (
-          <div key={item.id} style={{ marginTop: "-50px" }}>
-            <Group mt={30}>
-              <Button
-                variant="default"
-                radius="xl"
-                size="md"
-                // className={classes.control}
-                onClick={() => handleSelectedAboutMe(item)}
-                style={{
-                  backgroundColor: selectedItem.id === item.id ? "#7f75f7" : "", // Highlight color (green here)
-                  color: selectedItem.id === item.id ? "white" : "", // Change text color
-                  // borderColor: selectedItem.id === item.id ? "#4caf50" : "", // Change border color
-                }}
-              >
-                {item.name}
-              </Button>
-            </Group>
-          </div>
+          <Button
+            key={item.id}
+            radius="xl"
+            size="md"
+            color="violet"
+            variant={selectedItem.id === item.id ? "filled" : "default"}
+            onClick={() => setSelectedItem(item)}
+          >
+            {item.name}
+          </Button>
         ))}
-      </div>
-      <div style={{ marginTop: "50px" }}>
-        <Text className={classes.subTitle}>About Me and My Passion</Text>
-      </div>
+      </Group>
+
+      <Text ta="center" className={classes.subTitle}>
+        About Me and My Passion
+      </Text>
+
       <div className={classes.wrapper}>
         <div className={classes.body}>
-          <Image src={image} className={classes.image} />
+          <Image src={image} className={classes.image} alt="Desire portrait" />
         </div>
-        {selectedItem?.name === "Boi" ? (
-          <Text fz="xl" mt="sm" fw={500}>
-            {selectedItem?.about_me}
-          </Text>
-        ) : selectedItem?.name === "Education" ? (
+
+        {/* PROFILE */}
+        {selectedItem.name === "Profile" && (
+          <>
+            <Text fz="lg" mt="sm">
+              {selectedItem.about_me}
+            </Text>
+
+            <Group mt="md">
+              {[
+                "React",
+                "JavaScript",
+                "Mantine UI",
+                "HTML",
+                "CSS",
+                "Git",
+                "React Native",
+              ].map((skill) => (
+                <Button key={skill} size="xs" variant="light" radius="xl">
+                  {skill}
+                </Button>
+              ))}
+            </Group>
+          </>
+        )}
+
+        {/* EDUCATION */}
+        {selectedItem.name === "Education" && (
           <List
-            mt={30}
+            mt="md"
             spacing="sm"
-            size="xl"
+            size="lg"
             icon={
-              <ThemeIcon size={20} radius="xl">
-                <IconCheck size={12} stroke={1.5} />
+              <ThemeIcon size={20} radius="xl" color="violet">
+                <IconCheck size={12} />
               </ThemeIcon>
             }
           >
             <List.Item>
-              <b>Advanced certificate in computer studies</b> – from evelyn hone
-              college of applied art and commerce in 2017
+              <b>Advanced Certificate in Computer Studies</b> – Evelyn Hone
+              College of Applied Arts and Commerce (2017)
             </List.Item>
             <List.Item>
-              <b>Certificate in computer studies</b> – from evelyn hone college
-              of applied art and commerce in 2016
+              <b>Certificate in Computer Studies</b> – Evelyn Hone College of
+              Applied Arts and Commerce (2016)
             </List.Item>
           </List>
-        ) : selectedItem?.name === "Experience" ? ( // New condition for Experience
+        )}
+
+        {/* EXPERIENCE */}
+        {selectedItem.name === "Experience" && (
           <List
-            mt={30}
+            mt="md"
             spacing="sm"
-            size="xl"
+            size="lg"
             icon={
-              <ThemeIcon size={20} radius="xl">
-                <IconCheck size={12} stroke={1.5} />
+              <ThemeIcon size={20} radius="xl" color="violet">
+                <IconCheck size={12} />
               </ThemeIcon>
             }
           >
-            <List.Item>2 Years Work Experience as programmer</List.Item>
-            <List.Item>Programming as front end developer</List.Item>
-            <List.Item>Expert knowledge of front end languages</List.Item>
+            <List.Item>
+              2+ years of experience as a Front-End Developer
+            </List.Item>
+            <List.Item>
+              Built responsive web applications using React and modern UI
+              libraries
+            </List.Item>
+            <List.Item>
+              Experience working with APIs and component-based architecture
+            </List.Item>
+            <List.Item>
+              Strong understanding of HTML, CSS, and front-end best practices
+            </List.Item>
           </List>
-        ) : null}
+        )}
+
+        {/* PROJECTS */}
+        {selectedItem.name === "Projects" && (
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}
+          >
+            {[
+              {
+                title: "Mental Health App (Mobile)",
+                desc:
+                  "Cross-platform mobile application focused on mental health support, with user onboarding, secure authentication, and self-reflection questionnaires. Built with React Native, Expo, and TypeScript.",
+              },
+              {
+                title: "Osense App (Web)",
+                desc:
+                  "Role-based web application with authentication, admin management, and reusable dashboards/forms. Integrated AWS Amplify + GraphQL for secure data access.",
+              },
+              {
+                title: "Klapton Insurance Platform (Web)",
+                desc:
+                  "Responsive insurance platform with claim submission forms, user portals, and backend API integration. Built with Remix, TypeScript, and Golang.",
+              },
+              {
+                title: "Harvest (Web)",
+                desc:
+                  "Marketing and vendor management platform with responsive UI components and vendor store workflows. Developed using React.js, TypeScript, and Material UI.",
+              },
+            ].map((proj, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "0.5rem",
+                }}
+              >
+                <ThemeIcon
+                  size={20}
+                  radius="xl"
+                  color="violet"
+                  style={{ marginTop: 4 }}
+                >
+                  <IconCheck size={12} />
+                </ThemeIcon>
+                <div>
+                  <b>{proj.title}</b> – {proj.desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ import { Skills } from "./pages/Skills/Skills";
 import { Footer } from "./pages/Footer/Footer";
 import { Project } from "./pages/Project/Project";
 import { AboutMe } from "./pages/AboutUs/AboutMe";
-import { Contact } from "./pages/Contact/Contact";
+// import { Contact } from "./pages/Contact/Contact";
+import { Personality } from "./pages/Personality/Personality";
 
 function App() {
   return (
@@ -25,9 +26,12 @@ function App() {
       <div id="projects">
         <Project />
       </div>
-      <div id="contact">
-        <Contact />
+      <div id="personality">
+        <Personality />
       </div>
+      {/* <div id="contact">
+        <Contact />
+      </div> */}
       <div id="footer">
         <Footer />
       </div>

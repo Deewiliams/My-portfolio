@@ -3,51 +3,62 @@ import {
   IconBrandFacebook,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
-import { ActionIcon, Container, Group } from "@mantine/core";
-// import { MantineLogo } from '@mantinex/mantine-logo';
+import { ActionIcon, Container, Group, Text, Tooltip } from "@mantine/core";
 import classes from "./Footer.module.css";
 
 export function Footer() {
   return (
     <div className={classes.footer}>
-      <Container className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
-        Desire Irankunda
-        <Group
-          gap={0}
-          className={classes.links}
-          justify="flex-end"
-          wrap="nowrap"
-        >
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <a
+      <Container className={classes.inner} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Text c="white" w={500}>
+          Desire Irankunda
+        </Text>
+
+        <Group >
+          <Tooltip label="GitHub" position="top" withArrow>
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="filled"
+              component="a"
               href="https://github.com/Deewiliams"
               target="_blank"
-              style={{ textDecoration: "none", color: "white" }}
+              rel="noreferrer"
+              radius="xl"
             >
-              <IconBrandGithub size={40} stroke={1.5} />
-            </a>
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <a
+              <IconBrandGithub size={24} stroke={1.5} />
+            </ActionIcon>
+          </Tooltip>
+
+          <Tooltip label="Facebook" position="top" withArrow>
+            <ActionIcon
+              size="lg"
+              color="blue"
+              variant="filled"
+              component="a"
               href="https://web.facebook.com/irankunda1"
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
+              radius="xl"
             >
-              <IconBrandFacebook size={40} stroke={1.5} />
-            </a>
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <a
+              <IconBrandFacebook size={24} stroke={1.5} />
+            </ActionIcon>
+          </Tooltip>
+
+          <Tooltip label="LinkedIn" position="top" withArrow>
+            <ActionIcon
+              size="lg"
+              color="cyan"
+              variant="filled"
+              component="a"
               href="https://www.linkedin.com/in/desire-irankunda-0a8490183/"
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none", color: "white" }}
+              radius="xl"
             >
-              <IconBrandLinkedin size={40} stroke={1.5} />
-            </a>
-          </ActionIcon>
+              <IconBrandLinkedin size={24} stroke={1.5} />
+            </ActionIcon>
+          </Tooltip>
         </Group>
       </Container>
     </div>
