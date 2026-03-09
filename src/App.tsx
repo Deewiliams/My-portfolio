@@ -23,9 +23,7 @@ function App() {
       <div id="skills">
         <Skills />
       </div>
-      <div id="projects">
-        <Project />
-      </div>
+   
       <div id="personality">
         <Personality />
       </div>
