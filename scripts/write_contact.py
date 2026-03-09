@@ -1,4 +1,4 @@
-import {
+tsx = r"""import {
   ActionIcon,
   Box,
   Button,
@@ -32,13 +32,13 @@ const contactInfo = [
   {
     icon: <IconMail size={20} />,
     label: "Email",
-    value: "desireirankundawilliams@gmail.com",
-    href: "mailto:desireirankundawilliams@gmail.com",
+    value: "irankunda.desire@gmail.com",
+    href: "mailto:irankunda.desire@gmail.com",
   },
   {
     icon: <IconMapPin size={20} />,
     label: "Location",
-    value: "Lusaka, Zambia",
+    value: "Kigali, Rwanda",
     href: null,
   },
   {
@@ -268,3 +268,103 @@ export function Contact() {
     </Box>
   );
 }
+"""
+
+css = """.section {
+  padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.subtitle {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Two-column layout ── */
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: calc(var(--mantine-spacing-xl) * 2);
+  align-items: flex-start;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Left column ── */
+.heading {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+    border-color: var(--mantine-color-violet-5);
+  }
+}
+
+.infoLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--mantine-color-violet-5) !important;
+  }
+}
+
+.socialIcon {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
+  }
+}
+
+/* ── Right: form card ── */
+.formCard {
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+}
+
+/* ── Submit button ── */
+.submitBtn {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  border: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover:not(:disabled) {
+    opacity: 0.92;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+  }
+}
+"""
+
+base = '/Users/desireirankunda/Desktop/projects/My-portfolio/src/pages/Contact'
+with open(f'{base}/Contact.tsx', 'w') as f:
+    f.write(tsx)
+with open(f'{base}/Contact.module.css', 'w') as f:
+    f.write(css)
+
+print(f"TSX: {len(tsx.splitlines())} lines")
+print(f"CSS: {len(css.splitlines())} lines")
+print("Done")

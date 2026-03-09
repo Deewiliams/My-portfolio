@@ -34,14 +34,14 @@ export function Header() {
               Skills
             </Link>
 
-            <Link
+            {/* <Link
               to="projects"
               smooth={true}
               duration={500}
               className={classes.link}
             >
               My Project
-            </Link>
+            </Link> */}
             <Link
               to="contact"
               smooth={true}
