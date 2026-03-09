@@ -1,10 +1,23 @@
 .wrapper {
-  padding-top: calc(var(--mantine-spacing-xl) * 2);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  /* min-height: 650px; */
+  padding-top: calc(var(--mantine-spacing-xl) * 2.5);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 1.5);
 }
 
 .title {
-  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+    border-radius: 4px;
+    margin: 14px auto 0;
+  }
 }

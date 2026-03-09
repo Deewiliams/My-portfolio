@@ -1,33 +1,68 @@
 .header {
-  height: 60px;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: 64px;
+  padding-left: var(--mantine-spacing-xl);
+  padding-right: var(--mantine-spacing-xl);
   border-bottom: 1px solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    light-dark(var(--mantine-color-gray-2), rgba(31, 30, 30, 0.08));
+  background-color: light-dark(
+    rgba(255, 255, 255, 0.85),
+    rgba(26, 27, 30, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   cursor: pointer;
 }
 
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #7c3aed 0%, #f0f2f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .link {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100%;
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-3));
   font-weight: 500;
   font-size: var(--mantine-font-size-sm);
+  transition: color 0.2s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+    border-radius: 2px;
+    transition: width 0.25s ease;
+  }
+
+  &:hover {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+
+    &::after {
+      width: 60%;
+    }
+  }
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: 42px;
     width: 100%;
-  }
-
-  @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
   }
 }
 
@@ -41,6 +76,15 @@
       var(--mantine-color-gray-0),
       var(--mantine-color-dark-7)
     );
+  }
+}
+
+.themeToggle {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: rotate(20deg) scale(1.1);
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
   }
 }
 

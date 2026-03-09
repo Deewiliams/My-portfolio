@@ -5,10 +5,10 @@ import { LandingPage } from "./pages/landingPage/LandingPage";
 import { Header } from "./component/header/Header";
 import { Skills } from "./pages/Skills/Skills";
 import { Footer } from "./pages/Footer/Footer";
-import { Project } from "./pages/Project/Project";
+// import { Project } from "./pages/Project/Project";
 import { AboutMe } from "./pages/AboutUs/AboutMe";
-// import { Contact } from "./pages/Contact/Contact";
 import { Personality } from "./pages/Personality/Personality";
+import { Contact } from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -23,15 +23,13 @@ function App() {
       <div id="skills">
         <Skills />
       </div>
-      <div id="projects">
-        <Project />
-      </div>
+
       <div id="personality">
         <Personality />
       </div>
-      {/* <div id="contact">
+      <div id="contact">
         <Contact />
-      </div> */}
+      </div>
       <div id="footer">
         <Footer />
       </div>

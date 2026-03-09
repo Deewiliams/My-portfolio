@@ -1,4 +1,4 @@
-import { Box, Container, Group, SimpleGrid, Text, ThemeIcon } from "@mantine/core";
+tsx = r"""import { Box, Container, Group, SimpleGrid, Text, ThemeIcon } from "@mantine/core";
 import {
   IconBulb,
   IconCode,
@@ -122,3 +122,80 @@ export function Personality() {
     </Box>
   );
 }
+"""
+
+css = """.section {
+  padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.subtitle {
+  max-width: 520px;
+  margin: 0 auto var(--mantine-spacing-xl);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── Traits ── */
+.traitRow {
+  flex-wrap: wrap;
+}
+
+.trait {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  color: light-dark(var(--mantine-color-violet-7), var(--mantine-color-violet-4));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.2);
+    border-color: var(--mantine-color-violet-5);
+  }
+}
+
+.traitIcon {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+/* ── Principle cards ── */
+.card {
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(124, 58, 237, 0.12);
+    border-color: var(--mantine-color-violet-4);
+  }
+}
+
+/* ── Signature ── */
+.signature {
+  padding-top: var(--mantine-spacing-xl);
+  border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  max-width: 300px;
+  margin: 0 auto;
+}
+"""
+
+base = '/Users/desireirankunda/Desktop/projects/My-portfolio/src/pages/Personality'
+with open(f'{base}/Personality.tsx', 'w') as f:
+    f.write(tsx)
+with open(f'{base}/Personality.module.css', 'w') as f:
+    f.write(css)
+
+print(f"TSX: {len(tsx.splitlines())} lines")
+print(f"CSS: {len(css.splitlines())} lines")
+print("Done")

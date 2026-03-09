@@ -1,12 +1,11 @@
 .wrapper {
   padding: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-xl);
-  margin-top: -100px;
 }
 
 .title {
   font-family: Greycliff CF, var(--mantine-font-family);
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.5;
   margin-bottom: var(--mantine-spacing-md);
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
@@ -16,7 +15,13 @@
   height: 240px;
   background-size: cover;
   background-position: center;
-  background-image: url(https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .content {
@@ -45,9 +50,9 @@
 .overlay {
   background-color: transparent;
   background-image: linear-gradient(
-    105deg,
-    var(--mantine-color-black) 20%,
-    #312f2f 50%,
-    var(--mantine-color-gray-4) 100%
+    160deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(49, 47, 47, 0.6) 60%,
+    rgba(124, 58, 237, 0.15) 100%
   );
 }

@@ -1,4 +1,5 @@
-import { Button, Group, Image, Title } from "@mantine/core";
+import { Button, Group, Image, Text, Title } from "@mantine/core";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import classes from "./LandingPage.module.css";
 import coder from "../../assets/coder.svg";
 import { Link } from "react-scroll";
@@ -7,12 +8,21 @@ export function LandingPage() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title style={{ textAlign: "center" }}>
-          <span className={classes.highlight}>Innovative</span>
-        </Title>
-        <Title className={classes.title}>Developer</Title>
-        <Group mt={30}>
-          <Button radius="xl" size="md" className={classes.controlButton}>
+        <Text className={classes.greeting}>Hello, I’m</Text>
+        <Title className={classes.name}>Desire Irankunda</Title>
+        <Text className={classes.role}>
+          <span className={classes.roleHighlight}>Front-End Developer</span>
+        </Text>
+        <Text className={classes.description}>
+          I build clean, fast, and user-friendly web experiences using React,
+          TypeScript, and modern UI libraries.
+        </Text>
+        <Group mt={36} gap="md">
+          <Button
+            radius="xl"
+            size="md"
+            className={classes.primaryBtn}
+          >
             <Link
               to="contact"
               smooth={true}
@@ -23,16 +33,44 @@ export function LandingPage() {
             </Link>
           </Button>
           <Button
-            variant="default"
+            variant="outline"
             radius="xl"
             size="md"
-            className={classes.controlButton}
+            className={classes.secondaryBtn}
             component="a"
             href="https://docs.google.com/document/d/e/2PACX-1vSr7xGrKk919RvAiH_7ubtD5Y4dzaHJlehO9pWv-GEsfmJN_F-zpKvbDy_DrIpXlUOYPuH6YxToJxyV/pub"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download PDF
+            View Resume
+          </Button>
+        </Group>
+        <Group mt={28} gap="sm">
+          <Button
+            component="a"
+            href="https://github.com/Deewiliams"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="subtle"
+            radius="xl"
+            size="sm"
+            leftSection={<IconBrandGithub size={18} />}
+            className={classes.socialBtn}
+          >
+            GitHub
+          </Button>
+          <Button
+            component="a"
+            href="https://www.linkedin.com/in/desire-irankunda-0a8490183/"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="subtle"
+            radius="xl"
+            size="sm"
+            leftSection={<IconBrandLinkedin size={18} />}
+            className={classes.socialBtn}
+          >
+            LinkedIn
           </Button>
         </Group>
       </div>
