@@ -12,7 +12,7 @@ import { Contact } from "./pages/Contact/Contact";
 
 function App() {
   return (
-    <MantineProvider defaultColorScheme="dark">
+    <MantineProvider defaultColorScheme="light">
       <Header />
       <div id="landing">
         <LandingPage />
