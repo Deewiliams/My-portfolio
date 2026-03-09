@@ -85,7 +85,7 @@ export function Personality() {
           tt="uppercase"
           fz="xs"
           c="dimmed"
-          ls={2}
+          lh={2}
           mb="lg"
         >
           How I Work
