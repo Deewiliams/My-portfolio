@@ -1,13 +1,12 @@
-import { Box, Group, Text } from "@mantine/core";
+import { Group, Text } from "@mantine/core";
 import { Link } from "react-scroll";
 import classes from "./Header.module.css";
 
 export function Header() {
   return (
-    <Box pb={120}>
-      <header className={classes.header}>
-        <Group justify="space-between" h="100%">
-          <Text fz="30px">Desire Irankunda</Text>
+    <header className={classes.header}>
+      <Group justify="space-between" h="100%">
+          <Text className={classes.logo}>Desire Irankunda</Text>
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link
               to="landing"
@@ -53,7 +52,6 @@ export function Header() {
             </Link>
           </Group>
         </Group>
-      </header>
-    </Box>
+    </header>
   );
 }

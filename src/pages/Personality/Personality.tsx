@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
 import { TitleHead } from "../../component/Title";
+import classes from "./Personality.module.css";
 
 export function Personality() {
   return (
@@ -41,6 +42,7 @@ export function Personality() {
               color="violet"
               radius="xl"
               size="sm"
+              className={classes.trait}
             >
               {trait}
             </Button>
@@ -48,7 +50,7 @@ export function Personality() {
         </Group>
 
         {/* How I work */}
-        <Card shadow="md" radius="md" mt="xl" p="xl">
+        <Card shadow="md" radius="md" mt="xl" p="xl" className={classes.card}>
           <Title order={3} mb="sm">
             How I Work
           </Title>

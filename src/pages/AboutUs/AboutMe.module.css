@@ -4,6 +4,7 @@
   padding: calc(var(--mantine-spacing-xl) * 2);
   border-radius: var(--mantine-radius-md);
   justify-content: space-evenly;
+  gap: var(--mantine-spacing-xl);
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column-reverse;
     padding: var(--mantine-spacing-xl);
@@ -11,18 +12,21 @@
 }
 
 .image {
-  width: 450px;
+  width: 380px;
+  border-radius: var(--mantine-radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;
+    width: 100%;
   }
 }
 
 .body {
-  padding-right: calc(var(--mantine-spacing-xl) * 4);
+  max-width: 500px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-right: 0;
+    max-width: 100%;
     margin-top: var(--mantine-spacing-xl);
   }
 }
@@ -55,7 +59,9 @@
   border-bottom-left-radius: 0;
 }
 .subTitle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
-  margin-top: -25px;
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-4));
+  margin-top: -10px;
+  margin-bottom: var(--mantine-spacing-xl);
 }
