@@ -77,18 +77,78 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-  { name: "HTML", image: html, level: 95, category: "frontend", color: "#e44d26" },
-  { name: "CSS", image: css, level: 90, category: "frontend", color: "#264de4" },
-  { name: "JavaScript", image: js, level: 88, category: "frontend", color: "#f7df1e" },
-  { name: "TypeScript", image: typescript, level: 80, category: "frontend", color: "#3178c6" },
-  { name: "React", image: react, level: 90, category: "frontend", color: "#61dafb" },
-  { name: "Bootstrap", image: bootstrap, level: 78, category: "frontend", color: "#7952b3" },
-  { name: "Node.js", image: node, level: 65, category: "backend", color: "#339933" },
+  {
+    name: "HTML",
+    image: html,
+    level: 95,
+    category: "frontend",
+    color: "#e44d26",
+  },
+  {
+    name: "CSS",
+    image: css,
+    level: 90,
+    category: "frontend",
+    color: "#264de4",
+  },
+  {
+    name: "JavaScript",
+    image: js,
+    level: 88,
+    category: "frontend",
+    color: "#f7df1e",
+  },
+  {
+    name: "TypeScript",
+    image: typescript,
+    level: 80,
+    category: "frontend",
+    color: "#3178c6",
+  },
+  {
+    name: "React",
+    image: react,
+    level: 90,
+    category: "frontend",
+    color: "#61dafb",
+  },
+  {
+    name: "Bootstrap",
+    image: bootstrap,
+    level: 78,
+    category: "frontend",
+    color: "#7952b3",
+  },
+  {
+    name: "Node.js",
+    image: node,
+    level: 65,
+    category: "backend",
+    color: "#339933",
+  },
   { name: "AWS", image: aws, level: 55, category: "backend", color: "#ff9900" },
-  { name: "React Native", image: reactNative, level: 72, category: "mobile", color: "#61dafb" },
+  {
+    name: "React Native",
+    image: reactNative,
+    level: 72,
+    category: "mobile",
+    color: "#61dafb",
+  },
   { name: "Git", image: git, level: 85, category: "tools", color: "#f05032" },
-  { name: "GitHub", image: github, level: 85, category: "tools", color: "#6e5494" },
-  { name: "MongoDB", image: mongodb, level: 60, category: "database", color: "#47a248" },
+  {
+    name: "GitHub",
+    image: github,
+    level: 85,
+    category: "tools",
+    color: "#6e5494",
+  },
+  {
+    name: "MongoDB",
+    image: mongodb,
+    level: 60,
+    category: "database",
+    color: "#47a248",
+  },
 ];
 
 function getLevelLabel(level: number) {
@@ -148,7 +208,9 @@ export function Skills() {
               <Group justify="space-between" mb="md" align="flex-start">
                 <div
                   className={classes.iconWrap}
-                  style={{ "--skill-color": skill.color } as React.CSSProperties}
+                  style={
+                    { "--skill-color": skill.color } as React.CSSProperties
+                  }
                 >
                   <Image
                     src={skill.image}
@@ -193,11 +255,31 @@ export function Skills() {
         {/* Summary row */}
         <Group justify="center" mt="xl" gap="xl" className={classes.summary}>
           {[
-            { icon: <IconBrandCss3 size={18} />, label: "Frontend", count: skills.filter((s) => s.category === "frontend").length },
-            { icon: <IconServer size={18} />, label: "Backend", count: skills.filter((s) => s.category === "backend").length },
-            { icon: <IconDeviceMobile size={18} />, label: "Mobile", count: skills.filter((s) => s.category === "mobile").length },
-            { icon: <IconBrandGit size={18} />, label: "Tools", count: skills.filter((s) => s.category === "tools").length },
-            { icon: <IconDatabase size={18} />, label: "Database", count: skills.filter((s) => s.category === "database").length },
+            {
+              icon: <IconBrandCss3 size={18} />,
+              label: "Frontend",
+              count: skills.filter((s) => s.category === "frontend").length,
+            },
+            {
+              icon: <IconServer size={18} />,
+              label: "Backend",
+              count: skills.filter((s) => s.category === "backend").length,
+            },
+            {
+              icon: <IconDeviceMobile size={18} />,
+              label: "Mobile",
+              count: skills.filter((s) => s.category === "mobile").length,
+            },
+            {
+              icon: <IconBrandGit size={18} />,
+              label: "Tools",
+              count: skills.filter((s) => s.category === "tools").length,
+            },
+            {
+              icon: <IconDatabase size={18} />,
+              label: "Database",
+              count: skills.filter((s) => s.category === "database").length,
+            },
           ].map((item) => (
             <Group key={item.label} gap="xs" className={classes.summaryItem}>
               <ThemeIcon size={32} radius="md" variant="light" color="violet">
