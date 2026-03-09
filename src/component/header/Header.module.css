@@ -79,6 +79,15 @@
   }
 }
 
+.themeToggle {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: rotate(20deg) scale(1.1);
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+  }
+}
+
 .dropdownFooter {
   background-color: light-dark(
     var(--mantine-color-gray-0),
