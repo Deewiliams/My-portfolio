@@ -6,7 +6,7 @@
   padding-left: var(--mantine-spacing-xl);
   padding-right: var(--mantine-spacing-xl);
   border-bottom: 1px solid
-    light-dark(var(--mantine-color-gray-2), rgba(255, 255, 255, 0.08));
+    light-dark(var(--mantine-color-gray-2), rgba(31, 30, 30, 0.08));
   background-color: light-dark(
     rgba(255, 255, 255, 0.85),
     rgba(26, 27, 30, 0.85)
@@ -20,7 +20,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #7c3aed 0%, #f0f2f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

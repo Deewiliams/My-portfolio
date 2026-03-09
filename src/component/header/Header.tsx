@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Group justify="space-between" h="100%">
-          <Text className={classes.logo}>Desire Irankunda</Text>
+          <Text className={classes.logo}>My Portfolio</Text>
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link
               to="landing"
