@@ -1,4 +1,4 @@
-import {
+tsx = r"""import {
   Badge,
   Box,
   Container,
@@ -14,6 +14,7 @@ import { useState } from "react";
 import {
   IconBrandCss3,
   IconBrandGit,
+  IconBrandReact,
   IconCode,
   IconDatabase,
   IconDeviceMobile,
@@ -218,3 +219,112 @@ export function Skills() {
     </Box>
   );
 }
+"""
+
+css = """.section {
+  padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.subtitle {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Category filter ── */
+.filterRow {
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-3));
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--mantine-color-violet-5);
+    color: var(--mantine-color-violet-5);
+  }
+}
+
+.filterBtnActive {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  border-color: transparent;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    border-color: transparent;
+    opacity: 0.9;
+  }
+}
+
+/* ── Skill card ── */
+.card {
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.15);
+    border-color: var(--mantine-color-violet-4);
+  }
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--mantine-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  transition: box-shadow 0.2s ease;
+
+  .card:hover & {
+    box-shadow: 0 0 0 2px var(--skill-color, var(--mantine-color-violet-5));
+  }
+}
+
+.progress {
+  transition: width 0.6s ease;
+}
+
+/* ── Summary bar ── */
+.summary {
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+  flex-wrap: wrap;
+}
+
+.summaryItem {
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+}
+"""
+
+base = '/Users/desireirankunda/Desktop/projects/My-portfolio/src/pages/Skills'
+with open(f'{base}/Skills.tsx', 'w') as f:
+    f.write(tsx)
+with open(f'{base}/Skills.module.css', 'w') as f:
+    f.write(css)
+
+print(f"TSX: {len(tsx.splitlines())} lines")
+print(f"CSS: {len(css.splitlines())} lines")
+print("Done")
