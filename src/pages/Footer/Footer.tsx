@@ -151,9 +151,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Desire Irankunda. All rights
             reserved.
           </Text>
-          <Text size="xs" c="dimmed">
-            Built with React &amp; Mantine
-          </Text>
+          
         </Group>
       </Container>
     </Box>
