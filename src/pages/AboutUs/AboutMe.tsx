@@ -45,20 +45,34 @@ const education = [
 ];
 
 const experience = [
+
   {
-    role: "Front-End Developer",
-    company: "Zstudy (EdTech)",
-    period: "2023 – Present",
+    role: "Mobile Developer",
+    company: "Global Health Innovations",
+    Project: "Mental Health App (Mobile)",
+    period: "Seasonal",
     points: [
-      "Built learner-centered interfaces with React and Mantine UI",
-      "Integrated AI-powered features and a virtual lab environment",
-      "Collaborated with design and backend teams on API integration",
+      "Developed a mental health app with user onboarding, authentication, and self-reflection questionnaires",
+      "Built responsive UI components and integrated with a cross-functional team",
+      "Collaborated with a remote team to develop a mental health app",
+    ], 
+  },
+  {
+    role: "Front-End and Back-End Developer",
+    company: "Hero Control Systems",
+    Project: "O'Sense (Web App)",
+    period: "May 2025 - Present",
+    points: [
+      "Led development of a modular ERP platform for managing organizational operations",
+      "Built secure authentication, role-based access control, and permission systems",
+      "mentored interns while coordinating development across multiple modules",
     ],
   },
   {
     role: "Front-End Developer",
-    company: "Klapton Insurance Zambia",
-    period: "2022 – 2023",
+    company: "Kuala",
+    Project: "Klapton Insurance Zambia (Web App)",
+    period: "May 2024 - Oct 2024",
     points: [
       "Developed responsive insurance platform with form validation",
       "Built user portals and claim submission flows with TypeScript",
@@ -67,12 +81,12 @@ const experience = [
   },
   {
     role: "Front-End Developer",
-    company: "Osense",
-    period: "2022",
+    company: "The Zig",
+    Project: "Harvest Platform (Web App)",
+    period: "Sep 2021 - May 2022 ",
     points: [
-      "Created role-based dashboards with authentication flows",
-      "Integrated AWS Amplify + GraphQL for secure data access",
-      "Built reusable component library across the application",
+      "Worked on a marketing and vendor management platform, developing vendor store management features and improving user workflows",
+      "Built reusable and responsive UI components while collaborating with a cross-functional team.",
     ],
   },
 ];
@@ -82,25 +96,29 @@ const projects = [
     title: "Mental Health App",
     type: "Mobile",
     stack: ["React Native", "Expo", "TypeScript"],
-    desc: "Cross-platform mobile app with user onboarding, authentication, and self-reflection questionnaires.",
+    desc:
+      "Cross-platform mobile app with user onboarding, authentication, and self-reflection questionnaires.",
   },
   {
     title: "Klapton Insurance",
     type: "Web",
     stack: ["Remix", "TypeScript", "Golang"],
-    desc: "Insurance platform with claim forms, user portals, and backend API integration.",
+    desc:
+      "Insurance platform with claim forms, user portals, and backend API integration.",
   },
   {
     title: "Osense App",
     type: "Web",
     stack: ["React", "AWS Amplify", "GraphQL"],
-    desc: "Role-based web app with admin management, dashboards, and secure data access.",
+    desc:
+      "Role-based web app with admin management, dashboards, and secure data access.",
   },
   {
     title: "Harvest Platform",
     type: "Web",
     stack: ["React.js", "TypeScript", "Material UI"],
-    desc: "Marketing and vendor management platform with responsive UI and vendor store workflows.",
+    desc:
+      "Marketing and vendor management platform with responsive UI and vendor store workflows.",
   },
 ];
 
@@ -299,10 +317,15 @@ export function AboutMe() {
                     <Group justify="space-between" mb="xs">
                       <div>
                         <Text fw={700}>{job.role}</Text>
-                        <Text size="sm" c="dimmed">
+                        <Text size="sm" c="dark">
                           {job.company}
                         </Text>
+                         <Text size="sm" c="dimmed">
+                          {job.Project}
+                        </Text>
                       </div>
+                      
+                      
                       <Badge variant="light" color="violet" size="sm">
                         {job.period}
                       </Badge>
