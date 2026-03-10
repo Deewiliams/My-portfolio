@@ -27,11 +27,16 @@ import image from "../../assets/desire.png";
 
 const stats = [
   { value: "2+", label: "Years Exp." },
-  { value: "10+", label: "Projects" },
+  { value: "5+", label: "Projects" },
   { value: "5+", label: "Tech Stack" },
 ];
 
 const education = [
+  {
+    degree: "Diploma in Computer Studies",
+    school: "Evelyn Hone College of Applied Arts and Commerce",
+    year: "2019",
+  },
   {
     degree: "Advanced Certificate in Computer Studies",
     school: "Evelyn Hone College of Applied Arts and Commerce",
