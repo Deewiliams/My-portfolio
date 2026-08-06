@@ -32,7 +32,7 @@ export function LandingPage() {
               Hire Me
             </Link>
           </Button>
-          <Button
+          {/* <Button
             variant="outline"
             radius="xl"
             size="md"
@@ -43,7 +43,7 @@ export function LandingPage() {
             rel="noopener noreferrer"
           >
             View Resume
-          </Button>
+          </Button> */}
         </Group>
         <Group mt={28} gap="sm">
           <Button
